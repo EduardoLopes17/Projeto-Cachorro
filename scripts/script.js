@@ -11,11 +11,23 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
   let moradia = document.querySelector('input[name="moradia"]:checked');
   let pet = document.querySelector('input[name="pet"]:checked');
   let quintal = document.querySelector('input[name="quintal"]:checked');
-
   let tempo = document.getElementById("tempo").value;
   let termos = document.getElementById("termos");
 
   if (nome.length < 3) return alert("Nome Inválido");
+
+  if (email.includes("@")) {
+    console.log("email Ok");
+  } else {
+    return alert("Email invalido (não contem @)");
+  }
+
+  if (CPF.length < 11) return alert("CPF Inválido");
+
+  if (telefone.length < 8) return alert("Numero Inválido");
+
+  if (idade.length < >18) return alert("idade Inválido");
+
 
   document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso!<br>" + "Nome: " + nome;
 });
