@@ -14,7 +14,7 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
   let tempo = document.getElementById("tempo").value;
   let termos = document.getElementById("termos");
 
-  if (nome.length < 3) return alert("Nome Inválido");
+  if (nome.length < 3) return alert("Nome Inválido"); 
 
   if (email.includes("@")) {
     console.log("email Ok");
@@ -22,11 +22,19 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
     return alert("Email invalido (não contem @)");
   }
 
-  if (CPF.length < 11) return alert("CPF Inválido");
+  if (telefone.replace(/\D/g, "").length < 8) {
+    return alert ("Numero invalido (contem Menos que 8 digidos");
+  } else {
+    console.log("Numero Ok");
+  }
 
-  if (telefone.length < 8) return alert("Numero Inválido");
+  if (CPF.replace(/\D/g, "").length < 11){
+    return alert ("CPF invalido (contem menos que 11 digitos)")
+  } else{
+    console.log("CPF Ok")
+  }
+  
 
-  if (idade.length < >18) return alert("idade Inválido");
 
 
   document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso!<br>" + "Nome: " + nome;
