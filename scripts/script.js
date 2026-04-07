@@ -23,17 +23,22 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
   }
 
   if (telefone.replace(/\D/g, "").length < 8) {
-    return alert ("Numero invalido (contem Menos que 8 digidos");
+    return alert ("Telefone invalido (contem Menos que 8 digidos)");
   } else {
     console.log("Numero Ok");
   }
 
   if (CPF.replace(/\D/g, "").length < 11){
-    return alert ("CPF invalido (contem menos que 11 digitos)")
+    return alert ("CPF invalido (contem menos que 11 digitos)");
   } else{
-    console.log("CPF Ok")
+    console.log("CPF Ok");
   }
-  
+
+  if (parseInt(idade) < 18) {
+  return alert("Idade inválida! Você precisa ter pelo menos 18 anos.");
+} else {
+  console.log("Idade Ok");
+}
 
 
 
