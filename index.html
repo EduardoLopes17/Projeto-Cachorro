@@ -17,62 +17,77 @@
 
         <form id="formAdocao">
             <label for="nome">Nome</label><br>
-            <input type="text" id="nome" placeholder="Digite seu nome">
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
             <br>
 
             <label for="email">Email</label><br>
-            <input type="email" id="email" placeholder="Email@gmail.com">
+            <input type="email" id="email" placeholder="Email@gmail.com" required>
             <br>
 
             <label for="telefone">Telefone</label><br>
-            <input type="text" id="telefone" placeholder="(XX)XXXX-XXXX">
+            <input type="text" id="telefone" placeholder="(XX)XXXX-XXXX" required>
             <br>
 
             <label for="CPF">CPF</label><br>
-            <input type="text" id="CPF" placeholder="000-000-000-00">
+            <input type="text" id="CPF" placeholder="000-000-000-00" required>
             <br>
 
             <label for="idade">Idade</label><br>
-            <input type="text" id="idade" placeholder="Ex 18">
+            <input type="text" id="idade" placeholder="Ex 18" required>
             <br>
 
             <label for="cidade">Cidade</label><br>
-            <input type="text" id="cidade" placeholder="Joiville-SC">
+            <input type="text" id="cidade" placeholder="Joiville-SC" required>
             <br>
 
-            <label for="moradia">Moradia</label><br>
-            <select name="moradia" id="moradia">
-                <option value="">Selecione</option>
-                <option value="casa">Casa</option>
-                <option value="apartamento">Apartamento</option>
-            </select>
-            <br>
+            <div required>>
+                <label for="moradia">Moradia</label>
+                <br>
+                <select name="moradia" id="moradia">
+                    <option value="">Selecione</option>
+                    <option value="casa">Casa</option>
+                    <option value="apartamento">Apartamento</option>
+                </select>
+                <br>
+            </div>
 
-            <label for="pet">Já teve pet antes?</label><br>
-            <input type="radio" name="pet" value="sim">Sim
-            <input type="radio" name="pet" value="nao">Não
-            <br>
+            <div required>
+                <label for="pet">Já teve pet antes?</label>
+                <br>
+                <input type="radio" name="pet" value="sim">Sim
+                <input type="radio" name="pet" value="nao">Não
+                <br>
+            </div>
 
+            <div required>
+                <label for="quintal">Possui Quintal?</label>
+                <br>
+                <input type="radio" name="quintal" value="sim">Sim
+                <input type="radio" name="quintal" value="nao">Não
+                <br>
+            </div>
 
-            <label for="quintal">Possui Quintal?</label><br>
-            <input type="radio" name="quintal" value="sim">Sim
-            <input type="radio" name="quintal" value="nao">Não
-            <br>
+            <div required>
+                <label for="tempo">Quanto tempo o animal ficará sozinho por dia?</label>
+                <br>
+                <input type="text" id="tempo" placeholder="Ex 4horas">
+                <br>
+            </div>
 
-            <label for="tempo">Quanto tempo o animal ficará sozinho por dia?</label><br>
-            <input type="text" id="tempo" placeholder="Ex 4horas">
-            <br>
-
-            <label for="motivo">Motivo da adoção</label><br>
-            <textarea id="motivo" name="motivo" rows="2" cols="35">
+            <div required>
+                <label for="motivo">Motivo da adoção</label><br>
+                <textarea id="motivo" name="motivo" rows="2" cols="35">
             </textarea>
-            <br>
-            <br>
+                <br>
+                <br>
+            </div>
 
-            <input type="checkbox" id="termos" name="termos" checked />
-            <label for="termos">Aceito do termo de responsabilidade</label><br>
+            <div required>
+                <input type="checkbox" id="termos" name="termos" checked />
+                <label for="termos">Aceito do termo de responsabilidade</label><br>
 
-            <button type="submit">Enviar</button>
+                <button type="submit">Enviar</button>
+            </div>
 
         </form>
 
